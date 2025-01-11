@@ -23,7 +23,7 @@ pub fn voice_input() {
         buffer_size: cpal::BufferSize::Default,
     };
 
-    let model_path = "C:/Users/User/RustroverProjects/VoiceAssistant/vosk-model-ru-0.22"; // Укажите путь к модели
+    let model_path = "C:/Users/User/RustroverProjects/VoiceAssistant/vosk-model-ru-0.22"; 
     let model = Model::new(model_path).expect("Failed to load model");
     let recognizer = Recognizer::new(&model, 16000.0).expect("Failed to create recognizer");
     let recognizer = Arc::new(Mutex::new(recognizer));
